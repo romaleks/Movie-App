@@ -1,9 +1,9 @@
-import Home from "@/components/screens/home/Home";
+import Home from '@/components/screens/home/Home'
 
 export default function HomePage() {
   return (
     <div>
       <Home />
     </div>
-  );
+  )
 }
