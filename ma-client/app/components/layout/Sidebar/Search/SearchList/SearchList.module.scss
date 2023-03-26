@@ -21,7 +21,7 @@
     }
 
     > span {
-      @apply ml-3 to-white truncate;
+      @apply ml-3 text-white truncate;
 
       &::last-child {
         width: 70%;

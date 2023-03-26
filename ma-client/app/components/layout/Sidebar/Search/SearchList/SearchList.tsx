@@ -19,7 +19,11 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
               width={50}
               height={50}
               alt={movie.title}
-              style={{ objectFit: 'contain', objectPosition: 'top' }}
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'top',
+                height: 50,
+              }}
               draggable="false"
             />
             <span>{movie.title}</span>
