@@ -6,7 +6,7 @@ import MaterialIcon from '@/components/ui/MaterialIcon'
 
 import { IMovie } from '@/shared/types/movie.types'
 
-import { getGenresListEach } from '@/utils/movie/getGenresListEach'
+import { getGenresListEach } from '@/utils/movie/getGenresList'
 
 import { getGenreUrl, getMovieUrl } from '@/config/url.config'
 
