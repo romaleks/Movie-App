@@ -20,6 +20,10 @@
   .popular {
     @apply text-center p-5;
 
+    a {
+      @apply flex justify-center;
+    }
+
     img {
       @apply rounded-layout shadow-lg image-like-bg;
     }

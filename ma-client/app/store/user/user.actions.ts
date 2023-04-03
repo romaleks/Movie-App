@@ -45,7 +45,6 @@ export const checkAuth = createAsyncThunk<IAuthResponse>(
   async (_, thunkApi) => {
     try {
       const response = await AuthService.getNewTokens()
-      toastr.success('Login', 'Completed successfully!')
       return response.data
     } catch (error) {
       if (errorCatch(error) === 'jwt exprired') {
