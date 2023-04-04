@@ -19,7 +19,7 @@ export const MovieService = {
     return movies
   },
 
-  async deleteMovie(_id: string) {
+  async delete(_id: string) {
     return axios.delete<string>(getMoviesUrl(`/${_id}`))
   },
 }

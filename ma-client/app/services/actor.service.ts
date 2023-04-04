@@ -11,7 +11,7 @@ export const ActorService = {
     })
   },
 
-  async deleteActor(_id: string) {
+  async delete(_id: string) {
     return axios.delete<string>(getActorsUrl(`/${_id}`))
   },
 }
