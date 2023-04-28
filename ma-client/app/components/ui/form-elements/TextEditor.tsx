@@ -45,7 +45,7 @@ const TextEditor: FC<ITextEditor> = ({
     <div className={cn(styles.common, styles.editorWrapper, 'animate-fade')}>
       <label>
         <span>{placeholder}</span>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} style={{ cursor: 'text' }}>
           <Editor
             toolbarClassName={styles.toolbar}
             editorClassName={styles.editor}

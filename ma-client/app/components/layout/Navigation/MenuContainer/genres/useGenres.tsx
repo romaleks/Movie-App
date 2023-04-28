@@ -13,8 +13,9 @@ export const useGenres = () => {
     {
       select: ({ data }) =>
         data
+          .filter(genre => genre.icon)
           .map(
-            (genre) =>
+            genre =>
               ({
                 icon: genre.icon,
                 link: getGenreUrl(genre.slug),
