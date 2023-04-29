@@ -30,6 +30,7 @@
     "react-loading-skeleton": "^3.2.0",
     "react-redux": "^8.0.5",
     "react-redux-toastr": "^7.6.11",
+    "react-select": "^5.7.2",
     "sass": "^1.59.3",
     "string-strip-html": "^13.2.1",
     "typescript": "5.0.2"

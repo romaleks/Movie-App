@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { FC, forwardRef } from 'react'
+import { forwardRef } from 'react'
 
 import { IField } from './form.interface'
 import styles from './form.module.scss'

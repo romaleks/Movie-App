@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic'
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { stripHtml } from 'string-strip-html'
 
 import SkeletonLoader from '@/components/ui/SkeletonLoader'
 import AdminNavigation from '@/components/ui/admin-navigation/AdminNavigation'
@@ -16,15 +14,8 @@ import formStyles from '@/ui/form-elements/admin-form.module.scss'
 import Meta from '@/utils/meta/Meta'
 import generateSlug from '@/utils/string/generateSlug'
 
-import { IActorEditInput } from './actor-edit.interface'
-import { useActorEdit } from './useActorEdit'
-
-const DynamicTextEditor = dynamic(
-  () => import('@/components/ui/form-elements/TextEditor'),
-  {
-    ssr: false,
-  }
-)
+import { IActorEditInput } from '../actor/actor-edit.interface'
+import { useActorEdit } from '../actor/useActorEdit'
 
 const ActorEdit: FC = () => {
   const {
@@ -79,17 +70,11 @@ const ActorEdit: FC = () => {
                     onChange={onChange}
                     value={value}
                     error={error}
-                    folder="actor"
+                    folder="actors"
                     placeholder="Photo"
                   />
                 )}
-                rules={{
-                  validate: {
-                    require: v =>
-                      (v && stripHtml(v).result.length > 0) ||
-                      'Photo is required!',
-                  },
-                }}
+                rules={{ required: 'Photo is required!' }}
               />
             </div>
 
