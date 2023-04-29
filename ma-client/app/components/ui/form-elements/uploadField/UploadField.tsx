@@ -9,15 +9,15 @@ import styles from '../form.module.scss'
 import { useUpload } from './useUpload'
 
 const UploadField: FC<IUploadField> = ({
-  folder,
-  value,
-  onChange,
   placeholder,
   error,
   style,
+  value,
+  folder,
+  onChange,
   isNotImage = false,
 }) => {
-  const { isLoading, uploadFile } = useUpload(onChange, folder)
+  const { uploadFile, isLoading } = useUpload(onChange, folder)
 
   return (
     <div className={cn(styles.field, styles.uploadField)} style={style}>
@@ -32,7 +32,7 @@ const UploadField: FC<IUploadField> = ({
             {isLoading ? (
               <SkeletonLoader count={1} className="w-full h-full" />
             ) : (
-              value && <Image src={value} alt="" fill unoptimized />
+              value && <Image src={value} alt="" layout="fill" unoptimized />
             )}
           </div>
         )}
