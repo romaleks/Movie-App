@@ -32,9 +32,9 @@ const ActorEdit: FC = () => {
   const { onSubmit, isLoading } = useActorEdit(setValue)
 
   return (
-    <Meta title="Actor">
+    <Meta title="Edit actor">
       <AdminNavigation />
-      <Heading title="Actor" />
+      <Heading title="Edit actor" />
 
       <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
         {isLoading ? (

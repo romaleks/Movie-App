@@ -21,9 +21,9 @@ const UserList: FC = () => {
   } = useGenres()
 
   return (
-    <Meta title="Genre">
+    <Meta title="Genres">
       <AdminNavigation />
-      <Heading title="Genre" />
+      <Heading title="Genres" />
 
       <AdminHeader
         handleSearch={handleSearch}

@@ -43,9 +43,9 @@ const MovieEdit: FC = () => {
   const { isLoading: isActorsLoading, data: actors } = useAdminActors()
 
   return (
-    <Meta title="Movie">
+    <Meta title="Edit movie">
       <AdminNavigation />
-      <Heading title="Movie" />
+      <Heading title="Edit movie" />
 
       <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
         {isLoading ? (

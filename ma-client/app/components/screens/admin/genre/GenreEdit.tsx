@@ -40,9 +40,9 @@ const GenreEdit: FC = () => {
   const { onSubmit, isLoading } = useGenreEdit(setValue)
 
   return (
-    <Meta title="Genre">
+    <Meta title="Edit genre">
       <AdminNavigation />
-      <Heading title="Genre" />
+      <Heading title="Edit genre" />
 
       <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
         {isLoading ? (

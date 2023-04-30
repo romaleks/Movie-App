@@ -20,9 +20,9 @@ const UserList: FC = () => {
   } = useMovies()
 
   return (
-    <Meta title="Movie">
+    <Meta title="Movies">
       <AdminNavigation />
-      <Heading title="Movie" />
+      <Heading title="Movies" />
 
       <AdminHeader
         handleSearch={handleSearch}
