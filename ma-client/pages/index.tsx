@@ -13,15 +13,11 @@ import { getGenresList } from '@/utils/movie/getGenresList'
 
 import { getActorUrl, getMovieUrl } from '@/config/url.config'
 
-const HomePage: NextPage<IHome> = ({ slides, actors, trendingMovies }) => {
-  return (
-    <div>
-      <Home slides={slides} trendingMovies={trendingMovies} actors={actors} />
-    </div>
-  )
+const HomePage: NextPage<IHome> = ({ ...props }) => {
+  return <Home {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<IHome> = async () => {
   try {
     const { data: movies } = await MovieService.getAll()
     const { data: dataActors } = await ActorService.getAll()
@@ -58,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
         slides,
         actors,
         trendingMovies,
-      } as IHome,
+      },
     }
   } catch (error) {
     console.log(errorCatch(error))
@@ -68,7 +64,7 @@ export const getStaticProps: GetStaticProps = async () => {
         slides: [],
         actors: [],
         trendingMovies: [],
-      } as IHome,
+      },
     }
   }
 }
