@@ -17,7 +17,11 @@ interface IActorPage {
 
 const ActorPage: NextPage<IActorPage> = ({ movies, actor }) => {
   return actor ? (
-    <Catalog movies={movies || []} title={actor.name} />
+    <Catalog
+      movies={movies || []}
+      title={actor.name}
+      description="Movies with this actor in the roles"
+    />
   ) : (
     <Error404 />
   )
