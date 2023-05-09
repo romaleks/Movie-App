@@ -26,7 +26,7 @@ const Profile: FC = () => {
       <Heading title="Profile" className="mb-6" />
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         {isLoading ? (
-          <SkeletonLoader count={2} />
+          <SkeletonLoader count={2} className="h-12 mb-4" />
         ) : (
           <AuthFields formState={formState} register={register} />
         )}
