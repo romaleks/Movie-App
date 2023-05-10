@@ -83,6 +83,7 @@ const MovieEdit: FC = () => {
                   required: 'Duration is required',
                 })}
                 placeholder="Duration (min.)"
+                type="number"
                 error={errors.parameters?.duration}
                 style={{ width: '31%' }}
               />
@@ -92,6 +93,7 @@ const MovieEdit: FC = () => {
                   required: 'Year is required',
                 })}
                 placeholder="Year"
+                type="number"
                 error={errors.parameters?.year}
                 style={{ width: '31%' }}
               />
