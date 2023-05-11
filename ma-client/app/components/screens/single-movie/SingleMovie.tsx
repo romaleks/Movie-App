@@ -10,6 +10,7 @@ import Meta from '@/utils/meta/Meta'
 import { IMoviePage } from '../../../../pages/movie/[slug]'
 
 import Content from './Content/Content'
+import { useUpdateCountOpened } from './useUpdateCountOpened'
 
 const DynamicPlayer = dynamic(() => import('@/ui/video-player/VideoPlayer'), {
   ssr: false,
@@ -20,6 +21,8 @@ const DynamicRateMovie = dynamic(() => import('./RateMovie/RateMovie'), {
 })
 
 const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
+  useUpdateCountOpened(movie.slug)
+
   return (
     <Meta title={movie.title} description={`Watch ${movie.title}`}>
       <Banner
