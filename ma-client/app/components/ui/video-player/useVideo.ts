@@ -58,7 +58,6 @@ export const useVideo = () => {
     const updateProgress = () => {
       setCurrentTime(video.currentTime)
       setProgress((video.currentTime / videoTime) * 100)
-      console.log(progress)
     }
 
     video.addEventListener('timeupdate', updateProgress)
