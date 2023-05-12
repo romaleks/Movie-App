@@ -14,15 +14,18 @@ const FavouriteMovies: FC = () => {
 
   const { user } = useAuth()
 
-  // if (!user) return <NotAuthFavorites />
+  if (!user) return <NotAuthFavorites />
 
-  return (
-    // <MovieList
-    //   link="/favorites"
-    //   movies={favoriteMovies?.slice(0, 3) || []}
-    //   title="Favorites"
-    // />
-    <div></div>
+  return isLoading ? (
+    <div className="mt-11">
+      <SkeletonLoader count={3} className="h-28 mb-4" />
+    </div>
+  ) : (
+    <MovieList
+      link="/favorites"
+      movies={favoriteMovies?.slice(0, 3) || []}
+      title="Favorites"
+    />
   )
 }
 
