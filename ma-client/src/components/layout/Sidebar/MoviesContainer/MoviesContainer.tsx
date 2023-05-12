@@ -1,14 +1,14 @@
 import { FC } from 'react'
 
-import FavouriteMovies from './FavouriteMovies/FavouriteMovies'
+import FavoriteMovies from './FavouriteMovies/FavoriteMovies'
 import PopularMovies from './PopularMovies'
 
 const MoviesContainer: FC = () => {
   return (
-    <>
+    <div>
       <PopularMovies />
-      <FavouriteMovies />
-    </>
+      <FavoriteMovies />
+    </div>
   )
 }
 
