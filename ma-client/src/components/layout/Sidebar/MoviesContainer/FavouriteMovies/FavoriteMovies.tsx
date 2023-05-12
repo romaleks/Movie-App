@@ -14,14 +14,15 @@ const FavouriteMovies: FC = () => {
 
   const { user } = useAuth()
 
-  if (!user) return <NotAuthFavorites />
+  // if (!user) return <NotAuthFavorites />
 
   return (
-    <MovieList
-      link="/favorites"
-      movies={favoriteMovies?.slice(0, 3) || []}
-      title="Favorites"
-    />
+    // <MovieList
+    //   link="/favorites"
+    //   movies={favoriteMovies?.slice(0, 3) || []}
+    //   title="Favorites"
+    // />
+    <div></div>
   )
 }
 
