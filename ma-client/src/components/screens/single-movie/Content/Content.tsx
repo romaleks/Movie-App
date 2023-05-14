@@ -2,6 +2,8 @@ import { FC } from 'react'
 
 import MaterialIcon from '@/components/ui/MaterialIcon'
 
+import { useAuth } from '@/hooks/useAuth'
+
 import { IMovie } from '@/shared/types/movie.types'
 
 import { getActorUrl, getGenreUrl } from '@/config/url.config'
@@ -12,6 +14,8 @@ import styles from './Content.module.scss'
 import ContentList from './ContentList/ContentList'
 
 const Content: FC<{ movie: IMovie }> = ({ movie }) => {
+  const { user } = useAuth()
+
   return (
     <div className={styles.content}>
       <h1>{movie.title}</h1>
@@ -44,7 +48,7 @@ const Content: FC<{ movie: IMovie }> = ({ movie }) => {
         <span>{movie.rating.toFixed(1)}</span>
       </div>
 
-      <FavoriteButton movieId={movie._id} />
+      {user && <FavoriteButton movieId={movie._id} />}
     </div>
   )
 }

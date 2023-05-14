@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.4.2",
     "@reduxjs/toolkit": "^1.9.3",
     "@tanstack/react-query": "^4.28.0",
     "@types/node": "18.15.5",
@@ -35,6 +36,7 @@
     "react-star-rating-component": "^1.4.1",
     "react-transition-group": "^4.4.5",
     "sass": "^1.59.3",
+    "sharp": "^0.32.1",
     "string-strip-html": "^13.2.1",
     "typescript": "5.0.2"
   },
