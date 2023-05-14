@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
   poweredByHeader: false,
   env: {
     APP_URL: process.env.REACT_APP_URL,
