@@ -29,7 +29,7 @@ export class MovieModel extends TimeStamps {
 	@prop()
 	parameters: Parameter
 
-	@prop({ default: 4.0 })
+	@prop({ default: 0.0 })
 	rating?: number
 
 	@prop({ ref: () => GenreModel })
