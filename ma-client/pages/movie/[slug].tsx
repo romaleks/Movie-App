@@ -48,6 +48,7 @@ export const getStaticProps: GetStaticProps<IMoviePage> = async ({
         movie,
         similarMovies,
       },
+      revalidate: 60,
     }
   } catch (error) {
     return {

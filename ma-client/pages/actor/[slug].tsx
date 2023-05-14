@@ -40,6 +40,7 @@ export const getStaticProps: GetStaticProps<IActorPage> = async ({
         actor,
         movies,
       },
+      revalidate: 60,
     }
   } catch (error) {
     return {

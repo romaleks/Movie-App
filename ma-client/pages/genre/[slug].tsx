@@ -40,6 +40,7 @@ export const getStaticProps: GetStaticProps<IGenrePage> = async ({
         genre,
         movies,
       },
+      revalidate: 60,
     }
   } catch (error) {
     return {

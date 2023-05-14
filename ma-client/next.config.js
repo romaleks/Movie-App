@@ -3,20 +3,21 @@ const nextConfig = {
   poweredByHeader: false,
   env: {
     APP_URL: process.env.REACT_APP_URL,
+    APP_SERVER_URL: process.env.REACT_APP_ENV,
     APP_ENV: process.env.REACT_APP_ENV,
   },
   async rewrites() {
     return [
       {
-        source: "/api/:path*",
+        source: '/api/:path*',
         destination: `http://localhost:4200/api/:path*`,
       },
       {
-        source: "/uploads/:path*",
+        source: '/uploads/:path*',
         destination: `http://localhost:4200/uploads/:path*`,
       },
-    ];
+    ]
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
